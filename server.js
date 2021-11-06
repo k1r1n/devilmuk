@@ -30,7 +30,7 @@ function getUserProfiles() {
     url,
     headers,
   }, (err, res, body) => {
-      console.log('body', JSON.parse(res))
+      console.log('body',res)
   })
 }
 
