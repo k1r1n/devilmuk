@@ -6,4 +6,4 @@ app.get('/', (req, res) => res.send('hello devilmuk'))
 
 app.post('/webhook', (req, res) => res.sendStatus(200))
 
-app().listen(PORT, () => console.log(`Listening on ${ PORT }`))
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
