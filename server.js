@@ -13,6 +13,7 @@ app.get('/', (req, res) => res.send('hello devilmuk'))
 app.post('/webhook', (req, res) => {
     let reply_token = req.body.events[0].replyToken
     let msg = req.body.events[0].message.text
+    console.log('req.body.events', req.body.events)
     getUserProfiles()
     reply(reply_token, msg)
     res.sendStatus(200)
@@ -30,7 +31,7 @@ function getUserProfiles() {
     url,
     headers,
   }, (err, res, body) => {
-      console.log('body',res)
+      console.log('body', body)
   })
 }
 
