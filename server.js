@@ -36,6 +36,7 @@ function reply(reply_token, msg) {
       headers,
       body,
   }, (err, res, body) => {
+      console.log('err', err)
       console.log('status = ' + res.statusCode)
   })
 }
