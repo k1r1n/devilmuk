@@ -7,9 +7,10 @@ const PORT = process.env.PORT || 6666
 app.get('/', (req, res) => res.send('hello devilmuk'))
 
 app.post('/webhook', (req, res) => {
-  let reply_token = req.body.events[0].replyToken
-  let msg = req.body.events[0].message.text
-  reply(reply_token, msg)
+  console.log('req', req.body)
+  // let reply_token = req.body.events[0].replyToken
+  // let msg = req.body.events[0].message.text
+  // reply(reply_token, msg)
   res.sendStatus(200)
 })
 
