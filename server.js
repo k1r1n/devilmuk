@@ -1,20 +1,24 @@
+const bodyParser = require('body-parser')
+const request = require('request')
 const express = require('express')
 const app = express()
 const http = require('http').Server(app)
 const PORT = process.env.PORT || 6666
 
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => res.send('hello devilmuk'))
 
 app.post('/webhook', (req, res) => {
-  console.log('req', req.body)
-  // let reply_token = req.body.events[0].replyToken
-  // let msg = req.body.events[0].message.text
-  // reply(reply_token, msg)
-  res.sendStatus(200)
+    let reply_token = req.body.events[0].replyToken
+    let msg = req.body.events[0].message.text
+    reply(reply_token, msg)
+    res.sendStatus(200)
 })
 
 function reply(reply_token, msg) {
+  console.log('msg', msg)
   const headers = {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer {71080ba9f1568923cabee1de7d101fed}'
