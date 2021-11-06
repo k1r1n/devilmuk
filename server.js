@@ -21,7 +21,7 @@ function reply(reply_token, msg) {
   console.log('msg', msg)
   const headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer {71080ba9f1568923cabee1de7d101fed}'
+      'Authorization': 'Bearer {8pkfXWW/9CP4icNaZdhCaCUWj9jXTFgb3XAJRV4131qTcztWWZ/uKdZsVUYnZAY2Ej1iXixNwZNHAGwcaBB5nh1xLBpwbttUH0vZZ9C3moPtOADSsLuqtF7fEdyUW7mC6KIeqT1Dhbos7A1dTF61GgdB04t89/1O/w1cDnyilFU=}'
   }
   const body = JSON.stringify({
       replyToken: reply_token,
